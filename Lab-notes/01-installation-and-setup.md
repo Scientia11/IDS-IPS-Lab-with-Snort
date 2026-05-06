@@ -2,7 +2,7 @@
 
 ## Project Context
 
-This section documents the steps I followed to successfully install Snort 2.9.20 on Kali Linux from source. I initially had Snort 3 installed, but I decided to revert to Snort 2 because Snort 2 is widely used for learning IDS/IPS fundamentals, especially custom rule writing and basic detection engineering.
+This section documents the steps I followed to successfully install Snort 2.9.20 on my Kali Linux VM from source. I initially had Snort 3 installed, but I decided to revert to Snort 2 because Snort 2 is widely used for learning IDS/IPS fundamentals, especially custom rule writing and basic detection engineering.
 
 ## Lab Environment
 
