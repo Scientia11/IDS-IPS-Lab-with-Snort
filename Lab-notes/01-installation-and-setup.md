@@ -148,7 +148,7 @@ make clean
 
 ## Step 9: Fixed PDF Decompression Function Error
 
-During compilation, I encountered anoter error:
+During compilation, I encountered another error:
 
 ```
 error: too many arguments to function ‘File_Decomp_PDF’; expected 0, have 1
