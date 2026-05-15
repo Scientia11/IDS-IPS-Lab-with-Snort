@@ -9,6 +9,8 @@ alert tcp any any -> any 80 ( msg:"HTTP URL contains .exe";  content:"|2e|exe"; 
 alert tcp any 80 -> any any (msg:"Potential Windows executable download over HTTP"; content:"Content-Type|3A| application/x-msdownload"; nocase; http_header; sid:10000005; rev:2;)
 
 alert tcp any 80 -> any any (msg:"HTTP payload contains DOS MZ or PE executable file signature"; file_data; content:"|4D 5A|"; depth:2; sid:10000006; rev:1;)
+
+alert tcp any any -> any any (msg:"Potential SSLoad activity via User-Agent"; content:"User-Agent|3A| SSLoad/1.1"; http_header; nocase; sid:10000007; rev:1;)
 ```
 
 ## IPS MODE
