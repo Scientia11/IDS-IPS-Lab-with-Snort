@@ -11,6 +11,8 @@ alert tcp any 80 -> any any (msg:"Potential Windows executable download over HTT
 alert tcp any 80 -> any any (msg:"HTTP payload contains DOS MZ or PE executable file signature"; file_data; content:"|4D 5A|"; depth:2; sid:10000006; rev:1;)
 
 alert tcp any any -> any any (msg:"Potential SSLoad activity via User-Agent"; content:"User-Agent|3A| SSLoad/1.1"; http_header; nocase; sid:10000007; rev:1;)
+
+alert tcp any any -> any 22 (msg:"Possible SSH Brute Force Attack"; flow:to_server,established; threshold:type both, track by_src, count 5, seconds 30; sid:10000008; rev:1;)
 ```
 
 ## IPS MODE
